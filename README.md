@@ -52,6 +52,7 @@ python manage.py runserver
 ```
 
 ## API Endpoints
+Document with sample API(Request Body, response etc): <a href="https://docs.google.com/document/d/1L-MSVn9qpE5R5A45_hb-RtaEkuCoKzsDPn45xuUnLDQ/edit?usp=sharing">API Documentaion</a>
 
 Register a new user: POST /api/users/register/
 Login: POST /api/users/login/

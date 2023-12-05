@@ -1,0 +1,357 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "VendorsManagement",
+    "dateExported": "2023-12-05T07:55:01.072Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "497cc71d-09f4-4018-bfa1-e9f574413736",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Get Vendors",
+            "url": "http://127.0.0.1:8000/api/vendors/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-12-02T06:10:18.186Z",
+            "modified": "2023-12-02T06:10:37.435Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ffec1908-14ee-41c2-8913-07a09ad6f4f6",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Create Vendor",
+            "url": "http://127.0.0.1:8000/api/vendors/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-12-02T06:10:59.092Z",
+            "modified": "2023-12-05T07:45:43.862Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Token 90fde9461d86ac8b74950d54b2240ffb65bd8e94"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Vendor Dummy Name\",\n    \"contact_details\": \"1478523695\",\n    \"address\": \"Dummy Address\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bcd5fda9-4e40-47fe-862b-2964fe9e22d7",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Update vendor detail",
+            "url": "http://127.0.0.1:8000/api/vendors/1/update/",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-12-02T07:14:29.690Z",
+            "modified": "2023-12-02T07:15:37.183Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"name\": \"Updated Vendor\",\r\n    \"contact_details\": \"1478523698\",\r\n    \"address\": \"VendorAddress\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "90066732-33c7-41db-aadc-359f1a65ab79",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Create Purchase Order",
+            "url": "http://localhost:8000/api/purchase_orders/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-12-02T08:56:03.133Z",
+            "modified": "2023-12-05T05:03:23.426Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 64eed82c83a6624e286bd2a1a2b6014f504fdffd"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"vendor\": 2,  \n  \"order_date\": \"2023-01-01T12:00:00Z\",\n  \"delivery_date\": \"2023-02-10T12:00:00Z\",\n  \"items\": {\"item1\": \"details\", \"item2\": \"details\"},\n  \"quantity\": 10,\n  \"status\": \"pending\",\n  \"quality_rating\": 4.5,\n  \"issue_date\": \"2023-01-02T12:00:00Z\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ccc9b4ac-2bb8-4ac1-bee2-9cce8946ab58",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Delete Purchase Order",
+            "url": "http://localhost:8000/api/purchase_orders/2/",
+            "method": "DELETE",
+            "sortNum": 35000,
+            "created": "2023-12-05T04:47:31.934Z",
+            "modified": "2023-12-05T04:49:17.313Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 64eed82c83a6624e286bd2a1a2b6014f504fdffd"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3d5358ce-61af-4143-9527-7a3df438be0d",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Edit Purchase Order",
+            "url": "http://localhost:8000/api/purchase_orders/3/",
+            "method": "PUT",
+            "sortNum": 37500,
+            "created": "2023-12-05T04:48:52.332Z",
+            "modified": "2023-12-05T05:05:34.036Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 64eed82c83a6624e286bd2a1a2b6014f504fdffd"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"vendor\": 2,  \n  \"order_date\": \"2023-01-01T12:00:00Z\",\n  \"delivery_date\": \"2023-01-10T12:00:00Z\",\n  \"items\": { \"item2\": \"details\"},\n  \"quantity\": 10,\n  \"status\": \"completed\",\n  \"quality_rating\": 4.5,\n  \"issue_date\": \"2023-01-02T12:00:00Z\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dabc2e8d-0c9a-47f6-90b1-7504ac5c0b87",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Get Purchase Orders list",
+            "url": "http://localhost:8000/api/purchase_orders/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-04T07:19:02.717Z",
+            "modified": "2023-12-04T10:13:01.926Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 64eed82c83a6624e286bd2a1a2b6014f504fdffd"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b4f094be-c5c3-4709-8aeb-c7f66b14f5be",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Get Purchase Order",
+            "url": "http://localhost:8000/api/purchase_orders/2/",
+            "method": "GET",
+            "sortNum": 45000,
+            "created": "2023-12-04T10:13:46.758Z",
+            "modified": "2023-12-05T04:47:04.561Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 64eed82c83a6624e286bd2a1a2b6014f504fdffd"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "deed640b-2a47-4f65-b5e1-1025bd1044bc",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Get Vendor",
+            "url": "http://localhost:8000/api/vendors/1/",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-12-03T07:04:48.738Z",
+            "modified": "2023-12-04T10:08:45.110Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 389ba274fc09dc0f054629ff82c9722c5ca55aca"
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9a5a9c97-353d-45f5-845d-f934eda1e1af",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "USer Logout",
+            "url": "http://127.0.0.1:8000/api/user/logout/",
+            "method": "POST",
+            "sortNum": 52500,
+            "created": "2023-12-04T06:34:01.517Z",
+            "modified": "2023-12-05T07:25:12.999Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 38362d70f7318bbc8ba4d334d3711fe7aaa31656"
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "73e0c1c5-1932-4af5-8828-df11eae8f35f",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Delete Vendor",
+            "url": "http://127.0.0.1:8000/api/delete-vendor/",
+            "method": "DELETE",
+            "sortNum": 55000,
+            "created": "2023-12-04T05:35:15.782Z",
+            "modified": "2023-12-04T07:29:37.826Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 64eed82c83a6624e286bd2a1a2b6014f504fdffd"
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "16d2ebe4-c9d6-4dd8-9fdc-ccf543e894cb",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Edit Vendor",
+            "url": "http://localhost:8000/api/vendors/1/",
+            "method": "PUT",
+            "sortNum": 65000,
+            "created": "2023-12-04T05:20:09.366Z",
+            "modified": "2023-12-04T10:09:50.148Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 830619800420f37d6d1f3208d6d27fa29b094548"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Editvendor\",\n    \"contact_details\": \"8523698\",\n    \"address\": \"VendorAddress\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c65973fe-5034-4144-a6bf-7d6e2dfdc3a0",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Login User",
+            "url": "http://127.0.0.1:8000/api/user/login/",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-12-04T06:17:13.377Z",
+            "modified": "2023-12-05T07:44:23.069Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"username\": \"dummy_user\",\n  \"password\": \"password\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "none"
+            },
+            "tests": []
+        },
+        {
+            "_id": "54a16cf3-e5b6-4287-a7fa-e086ab00d4a3",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Get Vendor Matrix Performance",
+            "url": "http://localhost:8000/api/vendors/2/performance/",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-12-05T04:49:53.393Z",
+            "modified": "2023-12-05T05:06:08.322Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8c85450e-612f-494b-850d-6ab5b2eae642",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Aknowledge PO",
+            "url": "http://localhost:8000/api/purchase_orders/3/acknowledge/",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-12-05T04:53:07.635Z",
+            "modified": "2023-12-05T05:05:58.846Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"acknowledgment_date\": \"2023-01-05T12:00:00Z\"\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ed44134e-ca7e-460b-acc2-321b80c9234a",
+            "colId": "4d4b43b5-9711-4730-a78a-48bc1a492af1",
+            "containerId": "",
+            "name": "Register User",
+            "url": "http://127.0.0.1:8000/api/user/register/",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-12-05T06:46:11.960Z",
+            "modified": "2023-12-05T07:44:10.285Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"username\": \"dummy_user\",\r\n  \"password\": \"password\",\r\n  \"email\": \"yourdummy@example.com\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

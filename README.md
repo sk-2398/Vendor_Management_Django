@@ -54,6 +54,7 @@ python manage.py runserver
 ## API Endpoints
 Document with sample API(Request Body, response etc): <a href="https://docs.google.com/document/d/1L-MSVn9qpE5R5A45_hb-RtaEkuCoKzsDPn45xuUnLDQ/edit?usp=sharing">API Documentaion</a>
 
+You will also get API collection file in this project. Check for the file with the name "API-collection_VendorsManagement".
 Register a new user: POST /api/users/register/
 Login: POST /api/users/login/
 Logout: DELETE /api/users/logout/
